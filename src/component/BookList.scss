@@ -1,0 +1,23 @@
+.book_list_container{
+  position:relative;
+  top:40px;
+  left:50%;
+  transform:translateX(-50%);
+  .book_list{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .card_container{
+      img{
+        width:150px;
+        margin:15px;
+        &:hover{
+          transform: scale(1.1);
+          transition-duration:0.5s;
+        }
+      }
+      width:30%;
+
+    }
+  }
+}
