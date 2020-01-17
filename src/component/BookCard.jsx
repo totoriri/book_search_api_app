@@ -1,6 +1,7 @@
 import React from "react"
 import Modal from "./Modal"
 
+
 class BookCard extends React.Component {
     // const {image ,title,author,published} = this.props;
     constructor(props){
@@ -11,10 +12,12 @@ class BookCard extends React.Component {
   
     showModal = () => {
       this.setState({ show: true });
+      console.log("show modal")
     }
     
     hideModal = () => {
       this.setState({ show: false });
+      console.log("show hide modal")
     }
 
     render(){
@@ -25,16 +28,18 @@ class BookCard extends React.Component {
                 <h2>{this.props.title}</h2>
                 <h3>{this.props.author}</h3>
                 <p>{this.props.published}</p>
-                
-
-                <main>
-          <h1>React Modal</h1>
-          <Modal show={this.state.show} handleClose={this.hideModal} >
-            <p>Modal</p>
-            <p>Data</p>
-          </Modal>
-          <button type='button' onClick={this.showModal}>Open</button>
-        </main>
+            <div className="modal_area">
+                <Modal show={this.state.show} handleClose={this.hideModal} >
+                   <img src={this.props.image} alt="" />
+                    <div className="desc">
+                    <h2>{this.props.title}</h2>
+                    <h3>{this.props.author}</h3>
+                    <p>{this.props.published}</p>
+                    <p>{this.props.description}</p>
+                    </div>
+                </Modal>
+                <button type='button' onClick={this.showModal}>Open</button>
+            </div>
             </div>
         </div>
     )
