@@ -8,7 +8,6 @@ import "./Modal.scss"
       <div className={showHideClassName}>
         <section className='modal-main'>
           {children}
-         　
           <button
             onClick={handleClose}
           >

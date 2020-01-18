@@ -34,7 +34,7 @@ class Book extends React.Component {
         //         })
       
         // featchに書き換えたバージョン。corsとか、headerを書き加えてるのは、一度corsってエラーが出たから。
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.textField}+"sad"+"picture book"`, {
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.textField}+"sad"+"picture book"&maxResults=9`, {
             // crossDomain: true,
             method: 'get',
             // headers: {'Content-Type':'application/json'}
