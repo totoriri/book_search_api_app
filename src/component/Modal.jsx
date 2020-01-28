@@ -11,7 +11,7 @@ import "./Modal.scss"
           <button
             onClick={handleClose}
           >
-            Close
+            Close modal
           </button>
         </section>
       </div>
@@ -19,4 +19,5 @@ import "./Modal.scss"
   };
   
 export default Modal;
+
 
