@@ -8,9 +8,15 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     .card_container{
+      padding-bottom:50px;
+      .author_name{
+        color:rgb(114, 114, 114);
+      }
       img{
         width:150px;
         margin:15px;
+      }
+      .top_image{
         &:hover{
           transform: scale(1.1);
           transition-duration:0.5s;

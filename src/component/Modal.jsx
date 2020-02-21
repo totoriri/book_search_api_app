@@ -9,14 +9,8 @@ import {Link} from "react-router-dom"
       <div className={showHideClassName}>
         <section className='modal-main'>
           {children}
-          <button
-            onClick={handleClose}
-          >
-            Close
-          </button>
-          {/* なんでsearchareaと違って、ここに書くとうまくコンポーネントが開けないんだろう？？ */}
+          <button onClick={handleClose}>Close</button>
           <Link to="/wannaRead">wannaRead</Link>
-          {/* <Link to="/alreadyRead">alreadyRead</Link> */}
         </section>
       </div>
     );

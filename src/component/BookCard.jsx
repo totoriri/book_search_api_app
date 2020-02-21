@@ -1,6 +1,6 @@
 import React from "react"
 import Modal from "./Modal"
-import { BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class BookCard extends React.Component {
@@ -24,24 +24,19 @@ class BookCard extends React.Component {
     render(){
      return (
         <div className="card_container">
-            <img src={this.props.image} alt="" />
+            {/* <button type='button' onClick={this.showModal}><img className="top_image" src={this.props.image} alt="" /></button> */}
+            <Link onClick={this.showModal}><img className="top_image" src={this.props.image} alt="" /></Link>
             <div className="desc">
-                <h2>{this.props.title}</h2>
-                <h3>{this.props.author}</h3>
-                <p>{this.props.published}</p>
-                 <div className="modal_area">
-                <Router>
-                    <Modal show={this.state.show} handleClose={this.hideModal} >
-                        <img src={this.props.image} alt="" />
-                        <div className="desc">
-                            <h2>{this.props.title}</h2>
-                            <h3>{this.props.author}</h3>
-                            <p>{this.props.published}</p>
-                            <p>{this.props.description}</p>
-                        </div>
-                    </Modal>
-                </Router>
-                <button type='button' onClick={this.showModal}>Open</button>
+                <h1>{this.props.title}</h1>
+                <h3 className="author_name">{this.props.author}</h3>
+                <div className="modal_area">
+                     <Modal show={this.state.show} handleClose={this.hideModal} >
+                         <img src={this.props.image} alt="" />
+                         <p>{this.props.title}</p>
+                         <p>{this.props.author}</p>
+                         <p>published:{this.props.published}</p>
+                        <p>{this.props.description}</p>
+                </Modal>
             </div>
             </div>
         </div>
