@@ -1,5 +1,6 @@
 import React from "react"
 
+
 const SearchArea = (props) => {
     const { searchBook,searchHandler,textField } = props;
 
@@ -7,7 +8,7 @@ const SearchArea = (props) => {
         <div>
             <form onSubmit={searchBook} action="">
                 <input type="text" onChange={searchHandler} value={textField}  placeholder="    type name..." />
-                <input type="submit"　name="SUBMIT"/>
+                <input type="submit" name="SUBMIT" />
             </form>
         </div>
     )
